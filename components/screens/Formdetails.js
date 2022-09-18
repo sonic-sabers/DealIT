@@ -189,7 +189,7 @@ export default function Formdetails() {
     const response = await fetchService.register(values.EmailId, values.PWord);
     setLoading(false);
     if (response.status) {
-      navigation.replace('Bottomtab', {
+      navigation.replace('Orderplaced', {
         EmailId: values.EmailId,
       });
     } else {
@@ -298,11 +298,14 @@ export default function Formdetails() {
                     autoCapitalize="none"
                     title='Enter your Operator ID'
                     icon='email'
-                    keyboardType='email-address'
+             maxLength={8}
+                        keyboardType='numeric'  
                     MaterialCommunityIcons
                     error={touched.OID && errors.OID}
                     onChangeText={handleChange('OID')}
                     onBlur={handleBlur('OID')}
+                    password={false}
+                        secureTextEntry={false}
                   />
                   <Styledtextinput
                     // onChangeText={setEmailId}
@@ -375,7 +378,7 @@ export default function Formdetails() {
                       //     handleLogin()
                       // }}
                       submitting={isSubmitting}
-                      onPress={handleSubmit}
+                      onPress={()=> navigation.replace('Orderplaced')}
                       style={{
                         backgroundColor: '#FFFFFF',
                         padding: 15,
@@ -386,9 +389,7 @@ export default function Formdetails() {
                         // marginTop: 20,
                         height: 60,
                       }}>
-                      {Loading ?
-                        <ActivityIndicator />
-                        : <Text
+                      <Text
                           style={{
                             fontSize: 20,
                             fontWeight: '700',
@@ -396,7 +397,7 @@ export default function Formdetails() {
                             color: colors.primary
                           }}>
                           Register
-                        </Text>}
+                        </Text>
                     </TouchableOpacity>
                   </View>
                 </>

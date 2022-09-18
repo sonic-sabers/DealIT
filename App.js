@@ -8,6 +8,7 @@ import {
   ProductInfo,
   Loginscreen,
   Formdetails,
+  Orderplaced,
   Options } from
   './components/screens';
 
@@ -23,11 +24,12 @@ const App = () => {
         }}>
     
         <Stack.Screen name="Loginscreen" component={Loginscreen} />
-        <Stack.Screen name="Options" component={Options} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="ProductInfo" component={ProductInfo} />
+        <Stack.Screen name="Options" component={Options} />
         <Stack.Screen name="Formdetails" component={Formdetails} />
         <Stack.Screen name="MyCart" component={MyCart} />
-        <Stack.Screen name="ProductInfo" component={ProductInfo} />
+        <Stack.Screen name="Orderplaced" component={Orderplaced} />
       </Stack.Navigator>
     </NavigationContainer>
   );

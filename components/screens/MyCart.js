@@ -70,11 +70,11 @@ const MyCart = ({ navigation }) => {
 
 
   const checkOut = async () => {
-    try {
-      await AsyncStorage.removeItem('cartItems');
-    } catch (error) {
-      return error;
-    }
+    // try {
+    //   await AsyncStorage.removeItem('cartItems');
+    // } catch (error) {
+    //   return error;
+    // }
 
     navigation.navigate('Formdetails')
   };
@@ -528,7 +528,7 @@ const MyCart = ({ navigation }) => {
           alignItems: 'center',
         }}>
         <TouchableOpacity
-          onPress={() => (total != 0 ? checkOut() : null)}
+          onPress={() =>checkOut() }
           style={{
             width: '86%',
             height: '90%',

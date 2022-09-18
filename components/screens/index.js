@@ -4,4 +4,6 @@ export { default as MyCart } from './MyCart';
 export { default as ProductInfo } from './ProductInfo';
 export { default as Options } from './Options';
 export { default as Formdetails } from './Formdetails';
+export { default as Orderplaced } from './Orderplaced';
+// export { default as colors } from './colors';
 // export { default as colors } from './colors';

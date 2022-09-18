@@ -202,7 +202,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secondary,
     padding: 16,
     flex: 1,
-    fontColor:'black'
+    fontColor:'black',
+    color:'black'
+    
 
   },
   dropdown: {
@@ -220,6 +222,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
+    color:'black'
+    
   },
   label: {
     position: 'absolute',
