@@ -219,6 +219,8 @@ export default function Loginscreen() {
                         onChangeText={handleChange('EmailId')}
                         onBlur={handleBlur('EmailId')}
                         selectionColor={colors.white}
+password={false}
+                        secureTextEntry={false}
                       />
                       <Styledtextinput
                         // onChangeText={setPWord}
